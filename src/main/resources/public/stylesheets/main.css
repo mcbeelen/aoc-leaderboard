@@ -1,0 +1,176 @@
+body {
+  padding-top: 10px;
+  font-family: monospace;
+}
+
+body>.full-width {
+  width: 1420px;
+}
+
+.navbar {
+  min-height: 60px;
+}
+
+.navbar-brand {
+  padding-right: 20px;
+}
+.navbar-nav {
+  padding: 4px 0px;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+  background-color: #f8f8f8;
+}
+
+.navbar .glyphicon {
+  margin-right: 10px;
+}
+
+
+.panel-primary>.panel-heading {
+  height: 60px;
+  background-color: #000000;
+  border-color: #ffff00;
+  color: #ffff00;
+  font-family: monospace;
+}
+
+.panel-primary>.panel-body {
+  border-color: #ffff00;
+
+}
+
+.leaderboard .panel-heading h4,
+.leaderboard .panel-heading h5 {
+  float: left;
+  margin: auto 10px;
+}
+
+
+.leaderboard hr {
+  margin: 0px 10px;
+}
+
+.leaderboard .podium {
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  width: 1580px;
+}
+
+.rank {
+  float: left;
+  text-align: center;
+}
+
+.spacer {
+  background-color: #ffffff;
+}
+
+.position-0 {
+
+}
+.rank-0 {
+   background-color: #CFB53B;
+ }
+.position-1 {
+  margin-left: 8px;
+}
+.rank-1 {
+  background-color: #E6E8FA;
+}
+.position-2 {
+  margin-right: 8px;
+}
+.rank-2 {
+  background-color: #8C7853;
+}
+.rank-3 {
+  background-color: #dddddd;
+}
+.rank-4 {
+  background-color: #cccccc;
+}
+.rank-5 {
+  background-color: #bbbbbb;
+}
+.rank-6 {
+  background-color: #aaaaaa;
+}
+.rank-7 {
+  background-color: #999999;
+}
+.rank-8 {
+  background-color: #888888;
+}
+.rank-9 {
+  background-color: #777777;
+}
+.rank-10, .rank-11, .rank-12, .rank-13, .rank-14, .rank-15, .rank-16, .rank-17, .rank-18 {
+  background-color: #555555;
+  color: #eeeeee;
+}
+
+
+.position {
+  font-size: 24px;
+  text-shadow: #eeeeee;
+}
+
+
+.stars {
+  background-color: #333333;
+  color: yellow;
+  padding-left: 0px;
+  word-wrap: break-word;
+  font-family: monospace;
+}
+.stars span {
+  letter-spacing: 4px;
+
+}
+
+.stars span strong {
+  font-size: 24px;
+}
+
+.stars span strong.one {
+  font-size: 16px;
+  letter-spacing: normal;
+}
+
+
+
+.members {
+  text-align: center;
+  font-size: 14px;
+}
+.members ul {
+  padding-left: 0px;
+
+}
+
+.members li {
+  list-style: none;
+
+}
+
+.avatars {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.avatar {
+  display: inline;
+  padding: 2px 11px;
+}
+
+.avatar img {
+  max-width: 48px;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}

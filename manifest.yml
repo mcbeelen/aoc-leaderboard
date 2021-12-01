@@ -1,0 +1,8 @@
+---
+applications:
+- name: ximedes-aoc-leaderboard
+  buildpacks: 
+  - java_buildpack
+  path: target/leaderboard.jar
+  instances: 1
+  random-route: true

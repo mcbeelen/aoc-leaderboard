@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'index')}">
+
+<body>
+
+<div class="container full-width">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="panel panel-primary leaderboard">
+                <div class="panel-heading">
+                    <h4>Ximedes Private Leaderboard<br />
+                        Advent Of Code <strong>2020</strong></h4>
+                    <span class="pull-right">
+                        <span>Last Updated:</span>
+                        <strong th:text="${#temporals.format(timestampOfRefresh, 'HH:mm')}"></strong>
+                        <br/>
+                        <span>Next Update :</span>
+                        <em th:text="${#temporals.format(timestampOfNextfRefresh, 'HH:mm')}"></em>
+                    </span>
+                </div>
+                <div class="panel-body">
+
+                    <div class="podium">
+                        <div th:each="rank: ${rankings}" th:style="${'width: ' + ( 70 * rank.numberOfMembers) + 'px'}"
+                             th:classappend="${'rank position-' + rank.place}">
+
+                            <div class="spacer" th:style="${'margin-top: ' + (rank.position * 25) +'px'}"></div>
+
+                            <div class="avatars">
+                                <span class="avatar" th:each="employee: ${rank.employees}"><img
+                                        th:src="${employee.avatarUrl}"/></span>
+                            </div>
+
+
+                            <div th:classappend="${'rank-' + rank.place}"
+                                 th:style="${'height: ' + (600 - rank.position * 25) + 'px'}">
+                                <strong th:text="${rank.position}" class="position"></strong>
+                                <hr/>
+
+                                <div class="stars">
+                                <span th:if="${rank.stars > 0}">
+                                    <div th:if="${rank.numberOfMembers == 1}">
+                                        <span>*</span> <span>*</span><br />
+                                        <span>*</span><span> <strong class="one" th:text="${rank.stars}"></strong> </span><span>*</span><br />
+                                        <span>*</span> <span>*</span><br />
+                                    </div>
+                                    <div th:if="${rank.numberOfMembers == 2}">
+                                        <span>*</span> <span>*</span> <span>*</span><br />
+                                        <span>*</span><span> <strong th:text="${rank.stars}"></strong> </span><span>*</span><br />
+                                        <span>*</span> <span>*</span> <span>*</span><br />
+                                    </div>
+                                    <div th:if="${rank.numberOfMembers > 2}">
+                                        <span>*</span> <span>*</span> <span>*</span> <span>*</span> <span>*</span><br />
+                                        <span>*</span> <span>*</span><span> <strong th:text="${rank.stars}"></strong> <span>*</span> </span><span>*</span><br />
+                                        <span>*</span> <span>*</span> <span>*</span> <span>*</span> <span>*</span><br />
+                                    </div>
+                                </span>
+                                </div>
+                                <hr />
+                                <div class="members">
+                                    <ul>
+                                        <li th:each="employee: ${rank.employees}">
+                                            <span th:if="${employee.name != null}"
+                                                  th:text="${employee.name}">Marco</span>
+                                            <span th:if="${employee.name == null}"
+                                                  th:text="${'Unknown: ' + employee.id}">Marco</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+
+
+            <div class="panel panel-warning">
+                <div class="panel-heading">Avatars</div>
+                <div class="panel-body">
+                    Are you listed as Unknown and with an anonymous Avatar?<br/>
+                    Please contact Sjoerd van Houten to get you on the board.
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>
